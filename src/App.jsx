@@ -1,5 +1,5 @@
 import './App.css';
-import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, createHashRouter, Navigate, RouterProvider } from 'react-router-dom';
 import Layout from './Components/Layout/Layout';
 import Home from './Components/Home/Home';
 import Movies from './Components/Movies/Movies';
@@ -18,7 +18,7 @@ import MediaItemDetails from './Components/MediaItemDetails/MediaItemDetails';
 
 let queryClint = new QueryClient()
 
-let routers = createBrowserRouter([
+let routers = createHashRouter([
   {
     path: "", element: <Layout />, children: [
       { path: '', element: <Navigate to={'home'} /> },

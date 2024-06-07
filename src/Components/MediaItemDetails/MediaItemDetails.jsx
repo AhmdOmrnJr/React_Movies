@@ -5,14 +5,14 @@ import { useParams } from 'react-router-dom'
 
 export default function MediaItemDetails() {
 
-    let { mediaType, id } = useParams()
+    let { mediatype, id } = useParams()
 
     function getDetails () {
-        return axios.get(`https://api.themoviedb.org/3/${mediaType}/${id}?api_key=d710fda48d5a99d1a685e984dd6d2608&language=en-US`)
+        return axios.get(`https://api.themoviedb.org/3/${mediatype}/${id}?api_key=d710fda48d5a99d1a685e984dd6d2608&language=en-US`)
     }
     
       let { data, isLoading } = useQuery('details', getDetails)
-      console.log(data?.data.results);
+      console.log(data?.data);
     
 
   return (
