@@ -16,7 +16,7 @@ export default function People() {
 
   return <>
     <div className="row gap-1 d-flex justify-content-between">
-    {data?.data.results.map((item) => <MediaItem key={item.id} mediaType={'person'} item={item}/>)}
+    {data?.data.results.map((item) => <MediaItem key={item.id} mediatype={'person'} item={item}/>)}
     </div>
   </>
 

@@ -15,7 +15,7 @@ export default function Movies() {
 
   return <>
     <div className="row gap-1 d-flex justify-content-between">
-      {data?.data.results.map((item) => <MediaItem key={item.id} mediaType={'movie'} item={item}/>)}
+      {data?.data.results.map((item) => <MediaItem key={item.id} mediatype={'movie'} item={item}/>)}
     </div>
   </>
 }
