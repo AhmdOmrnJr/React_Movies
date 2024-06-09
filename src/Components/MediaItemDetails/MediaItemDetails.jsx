@@ -16,6 +16,10 @@ export default function MediaDetails() {
 
 
   return <>
+
+{isLoading ? <div><i className='fas fa-spinner fa-spin vh-100 d-flex justify-content-center align-items-center'></i></div> : null}
+
+
     <div className='row  d-flex justify-content-center  align-items-center m-5 '>
       <div className="col-md-3">
         {data?.data.poster_path ? <img src={'https://image.tmdb.org/t/p/w500' + data?.data.poster_path} alt="poster" className='w-100' />
